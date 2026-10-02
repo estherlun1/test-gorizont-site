@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Собери рюкзак — Горизонт</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">\n<link rel="stylesheet" href="mascot.css">
+<link rel="stylesheet" href="backpack.css">
+</head>
+<body>
+<div class="wrap">
+ <header>
+  <a class="logo" href="index.html" aria-label="Горизонт — на главную"><img src="assets/logo.svg" alt="Оздоровительный центр Горизонт, Клин"></a>
+  <button class="menu-btn" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">☰</button>
+  <nav id="mainNav">
+   <a href="index.html#map">Карта</a><a href="guides.html">Вожатые</a><a href="stories.html">Истории</a><a href="index.html#schedule">Расписание</a><a href="album.html">Галерея</a><a href="backpack.html">Рюкзак</a><a href="day.html">Один день</a><a href="index.html#about">О лагере</a>
+  </nav>
+  <div class="age">Возраст<b>0+</b></div>
+ </header>
+
+ <section class="page-top">
+  <p class="crumbs"><a href="index.html">Главная</a> / Собери рюкзак</p>
+  <h1>Собери<br>свой рюкзак</h1>
+  <p>Перетащи в рюкзак всё, что пригодится в лагере. Но будь внимателен: среди вещей спрятались лишние — их в рюкзак не пустят!</p>
+ </section>
+
+ <section class="game" id="game">
+  <div class="pile" id="left" aria-label="Вещи слева"></div>
+
+  <div class="bagcol">
+   <div class="bag" id="bag" aria-label="Рюкзак">
+    <svg viewBox="0 0 280 330" aria-hidden="true">
+     <path d="M95 42Q95 6 140 6T185 42" fill="none" stroke="#0a3f3d" stroke-width="14" stroke-linecap="round"/>
+     <rect x="10" y="30" width="260" height="295" rx="70" fill="#0d5c57"/>
+     <path d="M10 120Q10 30 140 30T270 120Q270 150 240 150H40Q10 150 10 120Z" fill="#a58be0"/>
+     <rect x="40" y="160" width="200" height="140" rx="28" fill="#0a3f3d"/>
+     <rect x="105" y="136" width="70" height="26" rx="8" fill="#ffe38a"/>
+    </svg>
+    <div class="stuff" id="stuff"></div>
+   </div>
+   <div class="side">
+    <div class="prog" role="progressbar" aria-label="Собрано вещей"><i id="bar"></i></div>
+    <p class="cnt">Собрано: <b id="cnt">0</b></p>
+    <div class="say" id="say" aria-live="polite"><img src="assets/wolf.png" alt=""><p id="sayTx"></p></div>
+   </div>
+  </div>
+
+  <div class="pile" id="right" aria-label="Вещи справа"></div>
+ </section>
+
+ <div class="win" id="win" role="dialog" aria-modal="true" aria-labelledby="winT" hidden>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+  <div class="win-box">
+   <div class="win-em">🎒</div>
+   <h2 id="winT">Рюкзак собран!</h2>
+   <p>Ты готов к Горизонту!</p>
+   <a class="btn" href="index.html#map">Исследовать лагерь →</a>
+   <button class="btn light" id="again" type="button">Собрать ещё раз</button>
+  </div>
+ </div>
+
+ <footer>
+  <div>
+   <span class="fname">Горизонт</span>
+   <div class="ftag">Муниципальный оздоровительный центр городского округа Клин</div>
+   <div class="soc">
+    <a href="https://vk.ru/gorizont_klin" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+    <a href="https://t.me/GorizontOfi" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.5 3.5 2.6 10.8c-.9.3-.9 1.3 0 1.6l4.7 1.5 1.8 5.6c.2.6 1 .8 1.4.3l2.6-2.5 4.9 3.6c.6.4 1.3.1 1.5-.6L23 4.7c.2-.9-.7-1.5-1.5-1.2zM9.3 13.5l8.4-5.2-6.6 6.2-.3 3.3z"/></svg></a>
+    <a href="https://max.ru/id5020084209_gos" target="_blank" rel="noopener" aria-label="MAX">MAX</a>
+   </div>
+  </div>
+  <div class="par"><b>Для родителей</b><a href="#parent-portal" class="parent-shortcut">Важная информация<br>и документы →</a></div>
+ </footer>
+</div>
+<script src="nav.js"></script>
+<script src="backpack.js"></script>
+<script src="mascot.js"></script>\n</body>
+</html>
